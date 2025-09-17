@@ -6,11 +6,13 @@ import Contact from "../../Pages/Contact";
 import Country from "../../Pages/Country";
 // import Header from "../Ui/Header";
 import Layout from "../Outlet/Layout";
+import ErrorPage from "../../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
