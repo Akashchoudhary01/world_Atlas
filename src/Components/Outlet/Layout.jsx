@@ -7,10 +7,10 @@ export default function Layout() {
   return (
    <>
    <Header/>
-   <main className='m-[32rem]'>
+  
 
    <Outlet/>
-   </main>
+  
 
 
    <Footer/>

@@ -7,12 +7,12 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         
         {/* Left - Copyright */}
-        <h1 className="text-2xl">
+        <h1 className=" text-md md:text-2xl">
           &copy; {new Date().getFullYear()} World-Atlas. All rights reserved.
         </h1>
 
         {/* Center - Address */}
-        <div className="text-center md:text-left text-xl">
+        <div className="text-center text-md md:text-left md:text-xl">
           <p>123 World Street, Global City</p>
           <p>Email: contact@worldatlas.com</p>
           <p>Phone: +91 98765 43210</p>
