@@ -1,10 +1,18 @@
 import React from 'react'
+import { router } from './Components/Router/Router'
+import { RouterProvider } from 'react-router-dom'
+import Header from './Components/Ui/Header'
 
 export default function App() {
   return (
-    <div className='flex justify-center items-center bg-zinc-800 h-lvh'>
-      <h1 className='text-7xl text-orange-500 font-bold'> Jai Shree Ram</h1>
-      
+    <RouterProvider router={router}>
+    
+    <div className='flex w-full justify-center items-center text-white bg-zinc-800 h-lvh'>
+      <div className='max-w-7xl'>
+        <Header/>
+      </div>
     </div>
+    </RouterProvider>
+
   )
 }
