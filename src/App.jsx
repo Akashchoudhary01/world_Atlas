@@ -11,6 +11,7 @@ export default function App() {
     <div className='flex w-full justify-center items-center text-white bg-zinc-800 h-lvh'>
       <div className='max-w-xl'>
         <Layout/>
+        
       </div>
     </div>
     </RouterProvider>

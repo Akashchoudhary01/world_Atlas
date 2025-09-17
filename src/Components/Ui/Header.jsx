@@ -9,76 +9,58 @@ export default function Header() {
   const handelShowMenu = () => {
     setShowMenu(!showMenu);
   };
+
   return (
-    <div className="flex justify-between items-center bg-gradient-to-r  from-blue-600 via-zinc-600 to-zinc-950 w-full py-8 px-5">
-      {/* */}
-      {/* Left Side - Logo */}
-      <h1 className="tracking-[12px]  md:tracking-[15px]  font-extralight text-3xl md:text-4xl text-white">
-        World-Atlas
-      </h1>
+    <header className="w-full bg-gradient-to-r from-blue-600 via-zinc-600 to-zinc-950 py-6 px-5">
+      <div className="flex justify-between items-center max-w-7xl min-w-[20rem] mx-auto">
+        {/* Logo */}
+        <h1 className="tracking-[12px] md:tracking-[15px] font-extralight text-3xl md:text-4xl text-white">
+          World-Atlas
+        </h1>
 
-      {/* desktop view */}
-      {/* Right Side - Nav Links */}
-      <ul className="hidden md:flex gap-8 text-2xl  text-white">
-        <Link to={"/"}>
-          <li className="cursor-pointer hover:text-blue-600 transition">
-            Home
-          </li>
-        </Link>
-        <Link to={"/about"}>
-          <li className="cursor-pointer hover:text-blue-600 transition">
-            About
-          </li>
-        </Link>
-        <Link to={"/country"}>
-          <li className="cursor-pointer hover:text-blue-600 transition">
-            Country
-          </li>
-        </Link>
-        <Link to={"/contact"}>
-          <li className="cursor-pointer hover:text-blue-600 transition">
-            Contact-us
-          </li>
-        </Link>
-      </ul>
-
-      {/* Hamburger menu btn */}
-      <div className="md:hidden text-2xl">
-        <button className="text-white" onClick={handelShowMenu}>
-          <GiHamburgerMenu />
-        </button>
-      </div>
-
-      {/* mobile Menu */}
-
-      {showMenu && (
-        <ul className=" md:hidden absolute top-0 right-0 bg-gradient-to-r  from-zinc-600 to-zinc-950 w-ful text-white shadow-md w-48 flex flex-col gap-4 py-6 px-4 text-lg font-medium transition-all ease-in-out duration-700">
-          {/* Close Button inside menu */}
-          <button className="self-end text-3xl mb-4" onClick={handelShowMenu}>
-            <IoCloseSharp />
-          </button>
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex gap-8 text-2xl text-white">
           <Link to={"/"}>
-            <li className="cursor-pointer hover:text-blue-600 transition">
-              Home
-            </li>
+            <li className="cursor-pointer hover:text-blue-600 transition">Home</li>
           </Link>
           <Link to={"/about"}>
-            <li className="cursor-pointer hover:text-blue-600 transition">
-              About
-            </li>
+            <li className="cursor-pointer hover:text-blue-600 transition">About</li>
           </Link>
           <Link to={"/country"}>
-            <li className="cursor-pointer hover:text-blue-600 transition">
-              Country
-            </li>
+            <li className="cursor-pointer hover:text-blue-600 transition">Country</li>
           </Link>
           <Link to={"/contact"}>
-            <li className="cursor-pointer hover:text-blue-600 transition">
-              Contact-us
-            </li>
+            <li className="cursor-pointer hover:text-blue-600 transition">Contact-us</li>
           </Link>
         </ul>
-      )}
-    </div>
+
+        {/* Hamburger / Close Btn */}
+        <div className="md:hidden text-3xl text-white">
+          <button onClick={handelShowMenu}>
+            {showMenu ? <IoCloseSharp /> : <GiHamburgerMenu />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <ul
+        className={`md:hidden fixed top-0 right-0 h-full bg-gradient-to-r from-zinc-600 to-zinc-950 text-white shadow-md w-60 flex flex-col gap-6 py-10 px-6 text-lg font-medium transform transition-transform duration-500 ${
+          showMenu ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <Link to={"/"} onClick={handelShowMenu}>
+          <li className="cursor-pointer hover:text-blue-600 transition">Home</li>
+        </Link>
+        <Link to={"/about"} onClick={handelShowMenu}>
+          <li className="cursor-pointer hover:text-blue-600 transition">About</li>
+        </Link>
+        <Link to={"/country"} onClick={handelShowMenu}>
+          <li className="cursor-pointer hover:text-blue-600 transition">Country</li>
+        </Link>
+        <Link to={"/contact"} onClick={handelShowMenu}>
+          <li className="cursor-pointer hover:text-blue-600 transition">Contact-us</li>
+        </Link>
+      </ul>
+    </header>
   );
 }

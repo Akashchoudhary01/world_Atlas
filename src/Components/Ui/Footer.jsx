@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-l from-blue-600 via-zinc-600 to-zinc-950 w-full py-8 px-6 text-white">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         
         {/* Left - Copyright */}
         <h1 className=" text-md md:text-2xl">
