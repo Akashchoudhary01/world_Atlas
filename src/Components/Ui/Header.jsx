@@ -12,14 +12,14 @@ export default function Header() {
 
   return (
     <header className="w-full bg-gradient-to-r from-blue-600 via-zinc-600 to-zinc-950 py-6 px-5">
-      <div className="flex justify-between items-center max-w-7xl min-w-[20rem] mx-auto">
+      <div className="flex justify-between items-center max-w-5xl min-w-[20rem] mx-auto">
         {/* Logo */}
-        <h1 className="tracking-[12px] md:tracking-[15px] font-extralight text-3xl md:text-4xl text-white">
+        <h1 className="tracking-[12px] md:tracking-[15px] font-extralight text-xl md:text-2xl text-white">
           World-Atlas
         </h1>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-8 text-2xl text-white">
+        <ul className="hidden md:flex gap-8 text-xl text-white">
           <Link to={"/"}>
             <li className="cursor-pointer hover:text-blue-600 transition">Home</li>
           </Link>
@@ -44,7 +44,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <ul
-        className={`md:hidden fixed top-0 right-0 h-full bg-gradient-to-r from-zinc-600 to-zinc-950 text-white shadow-md w-60 flex flex-col gap-6 py-10 px-6 text-lg font-medium transform transition-transform duration-500 ${
+        className={`md:hidden fixed top-0 right-0  bg-gradient-to-r from-zinc-600 to-zinc-950 text-white shadow-md w-40 flex flex-col gap-6 py-10 px-4 text-lg font-medium transform transition-transform duration-500 ${
           showMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
