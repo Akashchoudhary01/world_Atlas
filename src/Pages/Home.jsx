@@ -3,7 +3,7 @@ import image from '../assets/unnamed.png'
 
 export default function Home() {
   return (
-    <div className='bg-zinc-900 h-full w-full p-10'>
+    <div className='bg-zinc-950 h-full w-full p-10'>
       <div className='max-w-5xl min-w-[20rem] m-auto'>
         {/* grid for image and Slogan */}
         <div className='grid justify-center items-center grid-row md:grid-cols-2 mt-4'>
