@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import image from "../assets/unnamed.png";
+import ApiData from "../Components/ApiData/ApiData";
 
 export default function Home() {
   return (
@@ -18,8 +19,9 @@ export default function Home() {
               <span className="text-blue-600 font-bold">Earth</span> closer.
             </p>
 
+            {/* Button */}
             <div className="flex justify-center md:justify-start mt-6">
-              <button className="flex  items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300">
+              <button className="flex  items-center gap-2 outline-1 hover:bg-gradient-to-l from-black via-gray-700 to-black-600 text-white px-6 py-3 rounded-full font-medium transition-all duration-300">
                 Start Explore <FaArrowRightLong className="text-lg" />
               </button>
             </div>
@@ -27,6 +29,16 @@ export default function Home() {
           <div className="md:ml-20">
             <img className="w-xl mt-5 md:mt-0" src={image} alt="" />
           </div>
+        </div>
+
+        {/*country Details */}
+        {/* Country Details */}
+        <div className="md:mt-12 mt-8 mb-8 flex flex-col items-center text-center">
+          <h1 className="md:text-4xl text-2xl tracking-wide text-white mb-8">
+            Here are Some Interesting Facts About the World
+          </h1>
+
+          <ApiData />
         </div>
       </div>
     </div>
