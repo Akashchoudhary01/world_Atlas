@@ -1,13 +1,21 @@
 import React from "react";
 
 export default function Contact() {
+
+  const handelFormSubmit = (formData , e)=>{
+    e.preventDefault();
+    const formInputData = Object.fromEntries(formData.entries());
+    console.log(formInputData);
+    
+    
+  }
   return (
     <div id="contact" className="bg-zinc-950 h-full w-full p-10">
       <div className="max-w-2xl min-w-[20rem] text-white m-auto">
         <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
         <form
           className="flex flex-col gap-4 w-full bg-zinc-900 p-6 rounded-xl shadow-md"
-          action=""
+          action={()=> handelFormSubmit}
         >
           {/* Name */}
           <input
