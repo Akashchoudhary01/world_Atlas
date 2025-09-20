@@ -1,7 +1,10 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import image from "../assets/unnamed.png";
-import ApiData from "../Components/ApiData/ApiData";
+// import HeroSection from "../Components/ApiData/AboutApiData";
+// import About from "./About";
+import AboutApiData from "../Components/ApiData/AboutApiData";
+// import HeroSection from "../Components/ApiData/HeroSection";
 
 export default function Home() {
   return (
@@ -33,14 +36,12 @@ export default function Home() {
 
         {/*country Details */}
         {/* Country Details */}
-        <div className="md:mt-12 mt-8 mb-8 flex flex-col items-center text-center">
-          <h1 className="md:text-4xl text-2xl tracking-wide text-white mb-8">
-            Here are Some Interesting Facts About the World
-          </h1>
+       
 
-          <ApiData />
+          
+        <AboutApiData/>
         </div>
       </div>
-    </div>
+   
   );
 }
