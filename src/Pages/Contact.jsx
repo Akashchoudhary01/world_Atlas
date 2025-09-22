@@ -1,4 +1,5 @@
 import React from "react";
+import CountryApi from "../api/CountryApi/CountryApi";
 
 export default function Contact() {
 
@@ -53,6 +54,7 @@ export default function Contact() {
             Send Message
           </button>
         </form>
+        <CountryApi/>
       </div>
     </div>
   );
