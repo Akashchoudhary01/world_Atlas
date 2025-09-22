@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import CountryApi from "../api/CountryApi/CountryApi";
 import image from "../assets/unnamed.png";
 // import HeroSection from "../Components/ApiData/AboutApiData";
 // import About from "./About";
@@ -40,6 +41,7 @@ export default function Home() {
 
           
         <AboutApiData/>
+        <CountryApi/>
         </div>
       </div>
    
