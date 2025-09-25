@@ -12,7 +12,9 @@ export default function Country() {
       try {
         const res = await getCountryData();
         startTransition(() => {
-          setCountries(res.data);
+         setCountries(res.data);
+         console.log(res.data);
+
         });
       } catch (err) {
         console.error("Error fetching countries:", err);
